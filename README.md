@@ -10,7 +10,7 @@ npm install -g yo
 npm install -g generator-biztalk
 ```
 
-Then generate your new project:
+Go to the folder where you want to create your BizTalk solution then generate your new project:
 
 ```bash
 yo biztalk
