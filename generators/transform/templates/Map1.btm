@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mapsource Name="BizTalk Map" Version="2" BizTalkServerMapperTool_Version="3.0" XRange="100" YRange="420" OmitXmlDeclaration="Yes" UseXSLTransform="Undefined" TreatElementsAsRecords="No" OptimizeValueMapping="Yes" GenerateDefaultFixedNodes="Yes" PreserveSequenceOrder="No" IgnoreNamespacesForLinks="Yes" method="xml" CopyPIs="No" xmlVersion="1.0">
+  <SrcTree />
+  <TrgTree />
+  <ScriptTypePrecedence>
+    <CSharp Enabled="Yes" />
+    <ExternalAssembly Enabled="Yes" />
+    <VbNet Enabled="Yes" />
+    <JScript Enabled="Yes" />
+    <XsltCallTemplate Enabled="Yes" />
+    <Xslt Enabled="Yes" />
+  </ScriptTypePrecedence>
+  <TreeValues />
+  <CustomXSLT XsltPath=".\<%= mapname %>.xsl" ExtObjXmlPath="" />
+  <Pages>
+    <Page Name="Page 1">
+      <Links />
+      <Functoids />
+    </Page>
+  </Pages>
+</mapsource>

@@ -1,0 +1,24 @@
+<Project DefaultTargets="GenerateMsi" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\BtsMsiTask\BtsMsiTask.targets" />
+  <PropertyGroup>
+    <DestinationPath>$(BUILD_STAGINGDIRECTORY)</DestinationPath>
+    <ApplicationName><%=name%></ApplicationName>
+    <ApplicationDescription></ApplicationDescription>
+    <SolutionName>$(ApplicationName)</SolutionName>
+    <SourceLocation>c:\$(BUILD_BUILDNUMBER)</SourceLocation>
+  </PropertyGroup>
+  <ItemGroup>
+	<BtsAssembly Include="$(BUILD_SOURCESDIRECTORY)\Src\bin\$(BuildConfiguration)\<%=name%>.dll" />
+  </ItemGroup>
+  <Target Name="GenerateMsi">
+    <MsiTask  ApplicationDescription="$(ApplicationDescription)"
+              Version="1.0.0.0"
+              FileName="Deploy.msi"
+              DestinationPath="$(DestinationPath)"
+              ApplicationName="$(ApplicationName)"
+              BtsAssemblies="@(BtsAssembly)"
+              Resources="@(Resource)"
+              SourceLocation="$(SourceLocation)"
+              ReferenceApplications="@(ReferenceApplication)" />
+  </Target>
+</Project>
