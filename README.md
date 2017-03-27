@@ -1,9 +1,9 @@
-# generator-biztalk [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+# generator-biztalk [![NPM version][npm-image]][npm-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
 > Generator for BizTalk projects
 
 ## Installation
-
-First, install [Yeoman](http://yeoman.io) and generator-biztalk using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
+First, install [node.js and npm](https://nodejs.org/en/download/current/) (we assume you are running Windows since this is a BizTalk generator).
+Install [Yeoman](http://yeoman.io) and generator-biztalk using [npm](https://www.npmjs.com/). In PowerShell run:
 
 ```bash
 npm install -g yo
@@ -15,13 +15,6 @@ Then generate your new project:
 ```bash
 yo biztalk
 ```
-
-## Getting To Know Yeoman
-
- * Yeoman has a heart of gold.
- * Yeoman is a person with feelings and opinions, but is very easy to work with.
- * Yeoman can be too opinionated at times but is easily convinced not to be.
- * Feel free to [learn more about Yeoman](http://yeoman.io/).
 
 ## License
 
