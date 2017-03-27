@@ -28,6 +28,30 @@ module.exports = Generator.extend({
         ]
       },
       {
+        type: 'list',
+        name: 'biztalkversion',
+        message: 'Which BizTalk version?',
+        default: 'biztalk2016',
+        choices: [
+          {
+            name: 'BizTalk2016',
+            value: 'biztalk2016'
+          },
+          {
+            name: 'BizTalk2013R2',
+            value: 'biztalk2013r2'
+          },
+          {
+            name: 'BizTalk2013',
+            value: 'biztalk2013'
+          }
+        ],
+        when: function (answers) {
+          return answers.type === 'biztalk';
+        }
+
+      },
+      {
         type: 'input',
         name: 'name',
         message: 'Your integration name',
@@ -40,9 +64,23 @@ module.exports = Generator.extend({
   },
   writing: function () {
     var name = this.props.name;
+    var dotnetversion = "";
+    console.info(this.props.biztalkversion);
+    switch (this.props.biztalkversion) {
+      case "biztalk2016":
+        dotnetversion = "v4.6";
+        break;
+      case "biztalk2013r2":
+        dotnetversion = "v4.5.2";
+        break;
+      case "biztalk2013":
+        dotnetversion = "v4.5";
+        break;
+    }
     var options = {
       name: name,
       cliUUID: uuid.v1().toUpperCase(),
+      dotnetversion: dotnetversion
 
     };
     switch (this.props.type) {
