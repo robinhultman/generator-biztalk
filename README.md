@@ -16,6 +16,13 @@ Go to the folder where you want to create your BizTalk solution then generate yo
 yo biztalk
 ```
 
+## Updating
+Update the generator by running:
+
+```bash
+npm update generator-biztalk -g 
+```
+
 ## License
 
 MIT © [Robin Hultman]()
