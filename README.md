@@ -1,6 +1,39 @@
 # generator-biztalk [![NPM version][npm-image]][npm-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
 > Generator for BizTalk projects
 
+Setting up BizTalk source code projects is a repetitive and boring yet important task. This Yeoman generator sets up a basic BizTalk solution with this structure:
+
+```
+<integrationname>.sln
+│   .gitignore
+│   nuget.config    
+│
+└───Src
+│   |
+│   └───<integrationname>.btproj
+│       |
+│       └───Transforms
+│       |
+│       └───Schemas
+│       |
+│       └───Pipelines
+│       |
+│       └───Orchestrations
+│   
+└───Tests
+│    |
+│    └───TestData
+└───Bindings
+```
+
+The included .gitignore is the official Github gitignore for [Visual Studio](https://github.com/github/gitignore/blob/master/VisualStudio.gitignore) which included relevant ignores for BizTalk.
+
+## Compatability
+Works with:
+- BizTalk Server 2013
+- BizTalk Server 2013R2
+- BizTalk Server 2016
+
 ## Installation
 First, install [node.js and npm](https://nodejs.org/en/download/current/) (we assume you are running Windows since this is a BizTalk generator).
 Install [Yeoman](http://yeoman.io) and generator-biztalk using [npm](https://www.npmjs.com/). In PowerShell run:
