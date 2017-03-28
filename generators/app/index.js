@@ -71,8 +71,6 @@ module.exports = Generator.extend({
         dotnetversion = "v4.6";
         break;
       case "biztalk2013r2":
-        dotnetversion = "v4.5.2";
-        break;
       case "biztalk2013":
         dotnetversion = "v4.5";
         break;
