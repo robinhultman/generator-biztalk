@@ -51,7 +51,7 @@ module.exports = Generator.extend({
   writing: function () {
     var name = this.props.name;
     var dotnetversion = "";
-    console.info(this.props.biztalkversion);
+
     switch (this.props.biztalkversion) {
       case "biztalk2016":
         dotnetversion = "v4.6";
@@ -111,7 +111,6 @@ module.exports = Generator.extend({
     mkdirp.sync('Src/Pipelines');
     mkdirp.sync('Src/Schemas');
     mkdirp.sync('Src/Orchestrations');
-    break;
   },
 
 });
