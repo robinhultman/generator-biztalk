@@ -64,6 +64,7 @@ module.exports = Generator.extend({
     var options = {
       name: name,
       cliUUID: uuid.v1().toUpperCase(),
+      assemblyUUID: uuid.v1().toUpperCase(),
       dotnetversion: dotnetversion
 
     };
@@ -92,9 +93,10 @@ module.exports = Generator.extend({
       this.destinationPath('Src/' + this.props.name + '.btproj'),
       options
     );
-    this.fs.copy(
+    this.fs.copyTpl(
       this.templatePath('Src/Properties/AssemblyInfo.cs'),
-      this.destinationPath('Src/Properties/AssemblyInfo.cs')
+      this.destinationPath('Src/Properties/AssemblyInfo.cs'),
+      options
     );
 
     this.fs.copyTpl(
