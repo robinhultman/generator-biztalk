@@ -15,20 +15,6 @@ module.exports = Generator.extend({
     return this.prompt([
       {
         type: 'list',
-        name: 'type',
-        message: 'What type of application do you want to create?',
-        choices: [
-          {
-            name: 'BizTalk',
-            value: 'biztalk'
-          }/*, {
-            name: 'BizTalk PipelineComponent',
-            value: 'pipelinecomponent'
-          }*/
-        ]
-      },
-      {
-        type: 'list',
         name: 'biztalkversion',
         message: 'Which BizTalk version?',
         default: 'biztalk2016',
