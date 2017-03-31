@@ -23,7 +23,11 @@ Setting up BizTalk source code projects is a repetitive and boring yet important
 └───Tests
 │    |
 │    └───TestData
+│
 └───Bindings
+│
+└───Build
+│   <integrationname>.proj
 ```
 
 The included .gitignore is the official Github gitignore for [Visual Studio](https://github.com/github/gitignore/blob/master/VisualStudio.gitignore) which included relevant ignores for BizTalk.
