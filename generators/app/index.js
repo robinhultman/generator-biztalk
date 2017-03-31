@@ -31,10 +31,7 @@ module.exports = Generator.extend({
             name: 'BizTalk2013',
             value: 'biztalk2013'
           }
-        ],
-        when: function (answers) {
-          return answers.type === 'biztalk';
-        }
+        ]
 
       },
       {
