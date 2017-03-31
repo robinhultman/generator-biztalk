@@ -87,12 +87,12 @@ module.exports = Generator.extend({
 
     this.fs.copyTpl(
       this.templatePath('Src/Integration.btproj'),
-      this.destinationPath('Src/' + this.props.name + '.btproj'),
+      this.destinationPath('Src/' + this.props.name + '/' + this.props.name + '.btproj'),
       options
     );
     this.fs.copyTpl(
       this.templatePath('Src/Properties/AssemblyInfo.cs'),
-      this.destinationPath('Src/Properties/AssemblyInfo.cs'),
+      this.destinationPath('Src/' + this.props.name + '/' + 'Properties/AssemblyInfo.cs'),
       options
     );
 
@@ -104,10 +104,10 @@ module.exports = Generator.extend({
 
     mkdirp.sync('Bindings');
     mkdirp.sync('Tests/TestData');
-    mkdirp.sync('Src/Transforms');
-    mkdirp.sync('Src/Pipelines');
-    mkdirp.sync('Src/Schemas');
-    mkdirp.sync('Src/Orchestrations');
+    mkdirp.sync('Src/' + this.props.name + '/'+ 'Transforms');
+    mkdirp.sync('Src/' + this.props.name + '/'+ 'Pipelines');
+    mkdirp.sync('Src/' + this.props.name + '/'+ 'Schemas');
+    mkdirp.sync('Src/' + this.props.name + '/'+ 'Orchestrations');
   },
 
 });
