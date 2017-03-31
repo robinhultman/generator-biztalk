@@ -67,49 +67,49 @@ module.exports = Generator.extend({
       dotnetversion: dotnetversion
 
     };
-    switch (this.props.type) {
-      case 'biztalk':
-        this.fs.copy(
-          this.templatePath('_gitignore'),
-          this.destinationPath('.gitignore')
-        );
+    this.fs.copy(
+      this.templatePath('_gitignore'),
+      this.destinationPath('.gitignore')
+    );
+    this.fs.copy(
+      this.templatePath('_gitattributes'),
+      this.destinationPath('.gitattributes')
+    );
 
-        this.fs.copyTpl(
-          this.templatePath('Integration.sln'),
-          this.destinationPath(this.props.name + '.sln'),
-          options
-        );
+    this.fs.copyTpl(
+      this.templatePath('Integration.sln'),
+      this.destinationPath(this.props.name + '.sln'),
+      options
+    );
 
-        this.fs.copy(
-          this.templatePath('nuget.config'),
-          this.destinationPath('nuget.config')
-        );
+    this.fs.copy(
+      this.templatePath('nuget.config'),
+      this.destinationPath('nuget.config')
+    );
 
-        this.fs.copyTpl(
-          this.templatePath('Src/Integration.btproj'),
-          this.destinationPath('Src/' + this.props.name + '.btproj'),
-          options
-        );
-        this.fs.copy(
-          this.templatePath('Src/Properties/AssemblyInfo.cs'),
-          this.destinationPath('Src/Properties/AssemblyInfo.cs')
-        );
+    this.fs.copyTpl(
+      this.templatePath('Src/Integration.btproj'),
+      this.destinationPath('Src/' + this.props.name + '.btproj'),
+      options
+    );
+    this.fs.copy(
+      this.templatePath('Src/Properties/AssemblyInfo.cs'),
+      this.destinationPath('Src/Properties/AssemblyInfo.cs')
+    );
 
-        this.fs.copyTpl(
-          this.templatePath('Build/Integration.proj'),
-          this.destinationPath('Build/' + name + '.proj'),
-          options
-        );
+    this.fs.copyTpl(
+      this.templatePath('Build/Integration.proj'),
+      this.destinationPath('Build/' + name + '.proj'),
+      options
+    );
 
-        mkdirp.sync('Bindings');
-        mkdirp.sync('Tests/TestData');
-        mkdirp.sync('Src/Transforms');
-        mkdirp.sync('Src/Pipelines');
-        mkdirp.sync('Src/Schemas');
-        mkdirp.sync('Src/Orchestrations');
-        break;
-    }
-
+    mkdirp.sync('Bindings');
+    mkdirp.sync('Tests/TestData');
+    mkdirp.sync('Src/Transforms');
+    mkdirp.sync('Src/Pipelines');
+    mkdirp.sync('Src/Schemas');
+    mkdirp.sync('Src/Orchestrations');
+    break;
   },
 
 });
