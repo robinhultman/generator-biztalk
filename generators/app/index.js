@@ -5,6 +5,7 @@ var chalk = require('chalk');
 var yosay = require('yosay');
 var uuid = require('uuid');
 var mkdirp = require('mkdirp');
+var path = require('path');
 
 module.exports = Generator.extend({
   //Configurations will be loaded here.
@@ -38,7 +39,7 @@ module.exports = Generator.extend({
         type: 'input',
         name: 'name',
         message: 'Your integration name',
-        default: this.appname // default to current folder name
+        default: path.basename(process.cwd()) // default to current folder name
       }
 
     ]).then(function (answers) {
