@@ -1,6 +1,6 @@
 {
   "name": "generator-biztalk",
-  "version": "0.5.4",
+  "version": "0.5.5",
   "description": "Generator for BizTalk projects",
   "homepage": "https://github.com/robinhultman/generator-biztalk",
   "author": {
