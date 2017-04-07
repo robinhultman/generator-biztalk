@@ -10,15 +10,17 @@ Setting up BizTalk source code projects is a repetitive and boring yet important
 │
 └───Src
 │   |
-│   └───<integrationname>.btproj
-│       |
-│       └───Transforms
-│       |
-│       └───Schemas
-│       |
-│       └───Pipelines
-│       |
-│       └───Orchestrations
+│   └───<integrationname>
+│        |
+│        └───<integrationname>.btproj
+│           |
+│           └───Transforms
+│           |
+│           └───Schemas
+│           |
+│           └───Pipelines
+│           |
+│           └───Orchestrations
 │   
 └───Tests
 │    |
