@@ -8,7 +8,7 @@
     <SourceLocation>c:\$(BUILD_BUILDNUMBER)</SourceLocation>
   </PropertyGroup>
   <ItemGroup>
-	<BtsAssembly Include="$(BUILD_SOURCESDIRECTORY)\Src\bin\$(BuildConfiguration)\<%=name%>.dll" />
+	<BtsAssembly Include="$(BUILD_SOURCESDIRECTORY)\Src\<%=name%>\bin\$(BuildConfiguration)\<%=name%>.dll" />
   </ItemGroup>
   <Target Name="GenerateMsi">
     <MsiTask  ApplicationDescription="$(ApplicationDescription)"
